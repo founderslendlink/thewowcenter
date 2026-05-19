@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { StaffCard } from "@/components/sections/StaffCard";
 
 export const metadata: Metadata = {
   title: "Leadership & Staff | WOW Center Miami",
@@ -237,33 +237,6 @@ const programStaff = [
   },
 ];
 
-function StaffCard({
-  name,
-  title,
-  photo,
-  large = false,
-}: {
-  name: string;
-  title: string;
-  photo: string;
-  large?: boolean;
-}) {
-  return (
-    <li className={`bg-cream rounded-2xl border border-cream-dark flex flex-col items-start ${large ? "p-6" : "p-4"}`}>
-      <div className={`rounded-full overflow-hidden bg-moss-50 mb-4 shrink-0 ${large ? "w-20 h-20" : "w-16 h-16"}`}>
-        <Image
-          src={photo}
-          alt={`${name} — ${title} at WOW Center Miami`}
-          width={large ? 80 : 64}
-          height={large ? 80 : 64}
-          className="w-full h-full object-cover object-top"
-        />
-      </div>
-      <h2 className={`font-serif text-ink mb-1 leading-snug ${large ? "text-lg" : "text-base"}`}>{name}</h2>
-      <p className="font-sans text-xs uppercase tracking-widest text-amber leading-relaxed">{title}</p>
-    </li>
-  );
-}
 
 export default function LeadershipPage() {
   return (
