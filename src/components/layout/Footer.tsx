@@ -20,6 +20,7 @@ const footerSections = [
     heading: "Get Involved",
     links: [
       { label: "Donate", href: LINKS.donate },
+      { label: "Events", href: "/events" },
       { label: "Volunteer", href: LINKS.volunteer },
       { label: "Partner With Us", href: LINKS.volunteer },
       { label: "Building on a Dream", href: "/donate/building-on-a-dream" },

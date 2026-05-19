@@ -49,20 +49,20 @@ export function UpcomingEvent() {
 
   return (
     <>
-      <section className="py-20 bg-moss-deep text-white" aria-labelledby="event-heading">
+      <section className="py-20 bg-cream" aria-labelledby="event-heading">
         <div className="container-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_380px] gap-10 items-center">
             <div>
               <p className="font-sans font-700 text-xs uppercase tracking-widest text-amber mb-4">
                 Upcoming Event
               </p>
-              <h2 id="event-heading" className="font-serif mb-4" style={{ color: "#ffffff" }}>
+              <h2 id="event-heading" className="font-serif text-ink mb-4">
                 WOW Experience 2026
               </h2>
-              <p className="text-white/80 text-xl leading-relaxed mb-6">
+              <p className="text-ink-70 text-xl leading-relaxed mb-6">
                 Miami&rsquo;s most inclusive night — our signature annual fundraiser celebrating WOW members and the community that makes it all possible.
               </p>
-              <div className="flex flex-col gap-3 text-white/70 text-sm font-sans mb-8">
+              <div className="flex flex-col gap-3 text-ink-70 text-sm font-sans mb-8">
                 <span className="flex items-center gap-2">
                   <CalendarDays size={16} className="text-amber shrink-0" aria-hidden="true" />
                   Saturday, September 26, 2026
@@ -85,22 +85,22 @@ export function UpcomingEvent() {
                 </Button>
                 <button
                   onClick={() => setSponsorOpen(true)}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-white/40 text-white font-sans font-700 text-sm hover:bg-white/10 focus-visible:outline focus-visible:outline-3 focus-visible:outline-amber transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-moss/40 text-moss font-sans font-700 text-sm hover:bg-moss/8 focus-visible:outline focus-visible:outline-3 focus-visible:outline-amber transition-colors"
                 >
                   Sponsorship Opportunities
                 </button>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/15 bg-white/8 p-7 backdrop-blur-sm space-y-4">
+            <div className="rounded-2xl border border-cream-dark bg-white shadow-sm p-7 space-y-4">
               <p className="font-sans font-700 text-xs uppercase tracking-widest text-amber">An evening of</p>
               {["Dinner & cocktails", "Dancing & entertainment", "Member celebrations", "Community impact"].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber shrink-0" aria-hidden="true" />
-                  <span className="text-white/85">{item}</span>
+                  <span className="text-ink-70">{item}</span>
                 </div>
               ))}
-              <div className="pt-4 border-t border-white/12 text-white/55 text-xs">
+              <div className="pt-4 border-t border-cream-dark text-ink-40 text-xs">
                 Tickets from $275 &bull; Tables &amp; sponsorships available
               </div>
             </div>
