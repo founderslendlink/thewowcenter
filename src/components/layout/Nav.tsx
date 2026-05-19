@@ -83,6 +83,33 @@ export function Nav() {
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
+  // Body scroll lock — uses position:fixed trick because iOS Safari ignores overflow:hidden on body
+  useEffect(() => {
+    if (open) {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.overflow = "hidden";
+    } else {
+      const top = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.overflow = "";
+      if (top) window.scrollTo(0, -parseInt(top));
+    }
+    return () => {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header
       className={cn(
@@ -206,7 +233,11 @@ export function Nav() {
         <div
           id="mobile-menu"
           ref={mobileMenuRef}
-          className="lg:hidden bg-white border-t border-cream-dark"
+          className="lg:hidden bg-white border-t border-cream-dark overflow-y-auto overscroll-contain"
+          style={{
+            maxHeight: "calc(100dvh - 4.5rem)",
+            WebkitOverflowScrolling: "touch",
+          }}
           role="dialog"
           aria-label="Mobile navigation"
           aria-modal="true"
