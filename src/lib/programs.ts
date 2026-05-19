@@ -7,6 +7,7 @@ export interface Program {
   outcomes: string[];
   whoFor: string;
   color: string;
+  vimeoId?: string;
 }
 
 export const programs: Program[] = [
@@ -25,6 +26,7 @@ export const programs: Program[] = [
     ],
     whoFor: "Open to all ability levels. No prior art experience required.",
     color: "bg-moss-50",
+    vimeoId: "884568423",
   },
   {
     slug: "community-based-education",
@@ -73,6 +75,7 @@ export const programs: Program[] = [
     ],
     whoFor: "All members. A foundational program for independent living.",
     color: "bg-moss-50",
+    vimeoId: "885226108",
   },
   {
     slug: "music-therapy",
@@ -90,6 +93,7 @@ export const programs: Program[] = [
     whoFor:
       "All ability levels. Especially beneficial for members with communication challenges.",
     color: "bg-cream",
+    vimeoId: "885228903",
   },
   {
     slug: "service-club",
@@ -171,6 +175,7 @@ export const programs: Program[] = [
     ],
     whoFor: "All members. Programs are adapted for every ability level.",
     color: "bg-moss-50",
+    vimeoId: "884946665",
   },
   {
     slug: "wow-workforce",

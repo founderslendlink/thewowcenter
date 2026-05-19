@@ -35,7 +35,7 @@ export function StaffCard({ name, title, photo, email, phone, large = false }: S
             className="w-full h-full object-cover object-top"
           />
         </div>
-        <h2 className={`font-serif text-ink leading-tight mb-1 break-words w-full ${large ? "text-base" : "text-sm"}`}>
+        <h2 className={`font-serif text-ink leading-tight mb-1 truncate w-full ${large ? "text-base" : "text-sm"}`}>
           {name}
         </h2>
         <p className="font-sans text-[10px] uppercase tracking-widest text-amber leading-relaxed">{title}</p>

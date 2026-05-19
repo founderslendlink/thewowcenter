@@ -154,10 +154,41 @@ export default async function ProgramPage({ params }: Props) {
         </div>
       </section>
 
+      {program.vimeoId && (
+        <section className="py-16 bg-cream" aria-labelledby="program-video-heading">
+          <div className="container-xl">
+            <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-10 items-center">
+              <div>
+                <p className="font-sans font-700 text-xs uppercase tracking-widest text-amber mb-3">
+                  See it in action
+                </p>
+                <h2 id="program-video-heading" className="font-serif text-3xl text-ink mb-4">
+                  {program.name} at WOW Center
+                </h2>
+                <p className="text-ink-70 leading-relaxed">
+                  Watch how our members experience {program.name.toLowerCase()} and see the impact firsthand.
+                </p>
+              </div>
+              <div className="overflow-hidden rounded-2xl shadow-lg border border-cream-dark">
+                <div className="relative aspect-video bg-black">
+                  <iframe
+                    src={`https://player.vimeo.com/video/${program.vimeoId}?dnt=1&transparent=0`}
+                    title={`${program.name} at WOW Center video`}
+                    className="absolute inset-0 w-full h-full"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="py-16 bg-cream" aria-labelledby="experience-heading">
         <div className="container-xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <article className="lg:col-span-2 rounded-2xl bg-white border border-cream-dark p-8">
+            <article className="lg:col-span-2 rounded-2xl bg-white border border-cream-dark p-8 shadow-sm">
               <p className="font-sans font-700 text-xs uppercase tracking-widest text-amber mb-3">
                 Daily experience
               </p>
