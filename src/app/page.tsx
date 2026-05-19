@@ -6,6 +6,7 @@ import { ProgramsGrid } from "@/components/sections/ProgramsGrid";
 import { DonateSection } from "@/components/sections/DonateSection";
 import { PartnerLogos } from "@/components/sections/PartnerLogos";
 import { AdmissionsCTA } from "@/components/sections/AdmissionsCTA";
+import { UpcomingEvent } from "@/components/sections/UpcomingEvent";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
@@ -115,6 +116,7 @@ export default function HomePage() {
       <OriginStory />
       <DonateSection />
       <PartnerLogos />
+      <UpcomingEvent />
       <AdmissionsCTA />
     </>
   );
