@@ -13,7 +13,7 @@ export function ProgramsGrid() {
               What we do together
             </p>
             <h2 id="programs-heading" className="font-serif text-ink">
-              Four programs.{" "}
+              Twelve programs.{" "}
               <em className="not-italic text-amber">One life,</em>
               <br />
               fully lived.
