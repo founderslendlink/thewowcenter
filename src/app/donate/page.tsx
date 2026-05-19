@@ -81,7 +81,36 @@ export default function DonatePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-cream" aria-labelledby="give-now-heading">
+      <section className="py-16 bg-cream" aria-labelledby="donate-video-heading">
+        <div className="container-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-10 items-center">
+            <div>
+              <p className="font-sans font-700 text-xs uppercase tracking-widest text-amber mb-3">
+                See your impact
+              </p>
+              <h2 id="donate-video-heading" className="font-serif text-3xl text-ink mb-4">
+                What your gift makes possible.
+              </h2>
+              <p className="text-ink-70 leading-relaxed">
+                Every dollar raised helps WOW members learn, work, create, and belong in Miami-Dade.
+              </p>
+            </div>
+            <div className="overflow-hidden rounded-2xl shadow-lg border border-cream-dark">
+              <div className="relative aspect-video bg-black">
+                <iframe
+                  src="https://player.vimeo.com/video/727907388?dnt=1&transparent=0"
+                  title="WOW Center impact video"
+                  className="absolute inset-0 w-full h-full"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white" aria-labelledby="give-now-heading">
         <div className="container-xl max-w-3xl">
           <div className="bg-white rounded-2xl border border-cream-dark p-8 sm:p-12 shadow-sm text-center">
             <div className="inline-flex items-center justify-center rounded-full bg-amber/10 p-4 mb-6" aria-hidden="true">

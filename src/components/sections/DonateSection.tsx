@@ -54,7 +54,7 @@ export function DonateSection() {
                 <p className="font-serif text-2xl font-600 text-amber mb-1">
                   {tier.amount}
                 </p>
-                <p className="text-sm font-700 text-ink leading-relaxed">{tier.impact}</p>
+                <p className="text-sm font-bold text-ink leading-relaxed">{tier.impact}</p>
               </div>
             ))}
           </div>

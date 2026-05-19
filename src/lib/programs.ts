@@ -43,6 +43,7 @@ export const programs: Program[] = [
     ],
     whoFor: "Members who are working toward greater community independence.",
     color: "bg-cream",
+    vimeoId: "885226108",
   },
   {
     slug: "culinary",
@@ -143,6 +144,7 @@ export const programs: Program[] = [
     whoFor:
       "Members with speech, language, or fine motor support needs. Referral from intake team.",
     color: "bg-cream",
+    vimeoId: "999557854",
   },
   {
     slug: "special-olympics",
@@ -193,6 +195,7 @@ export const programs: Program[] = [
     whoFor:
       "Members ages 21+ who are ready to pursue competitive employment.",
     color: "bg-cream",
+    vimeoId: "1031342821",
   },
   {
     slug: "wellness",
