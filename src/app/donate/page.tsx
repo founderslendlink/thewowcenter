@@ -96,13 +96,10 @@ export default function DonatePage() {
               minutes through our trusted donation platform.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+            <div className="flex justify-center mb-10">
               <Button href={LINKS.donateFallback} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
                 Donate Securely <ExternalLink size={18} aria-hidden="true" />
               </Button>
-              <p className="text-sm text-ink-70">
-                Opens WOW Center&rsquo;s secure giving page.
-              </p>
             </div>
 
             <div className="pt-8 border-t border-cream-dark">

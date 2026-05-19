@@ -213,8 +213,7 @@ export default function PartnersPage() {
               <div className="grid grid-cols-1 gap-4">
                 <div className="rounded-xl bg-white p-6 shadow-sm">
                   <p className="font-sans font-700 text-xs uppercase tracking-widest text-amber mb-3">Step 1</p>
-                  <h3 className="font-serif text-2xl text-ink mb-2">Choose any 2 of 3</h3>
-                  <p className="text-ink-70">Choose any 2 of the 3 partnership initiatives below.</p>
+                  <h3 className="font-serif text-2xl text-ink mb-2">Complete two initiatives to become an official Able Together partner.</h3>
                 </div>
                 <div className="rounded-xl bg-moss text-white p-6 shadow-sm">
                   <p className="font-sans font-700 text-xs uppercase tracking-widest text-amber mb-3">Step 2</p>
@@ -240,9 +239,6 @@ export default function PartnersPage() {
               <p className="text-ink-70 leading-relaxed">
                 Your pledge commits to transforming your business into an
                 inclusive and supportive space for individuals with disabilities.
-              </p>
-              <p className="mt-4 rounded-xl border border-moss-light/35 bg-white px-4 py-3 text-sm font-700 leading-relaxed text-ink">
-                Complete two initiatives to become an official Able Together partner.
               </p>
             </div>
 
