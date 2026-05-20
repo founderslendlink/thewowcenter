@@ -155,31 +155,40 @@ export default async function ProgramPage({ params }: Props) {
       </section>
 
       {program.vimeoId && (
-        <section className="py-16 bg-cream" aria-labelledby="program-video-heading">
-          <div className="container-xl">
-            <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-10 items-center">
-              <div>
-                <p className="font-sans font-700 text-xs uppercase tracking-widest text-amber mb-3">
-                  See it in action
-                </p>
-                <h2 id="program-video-heading" className="font-serif text-3xl text-ink mb-4">
-                  {program.name} at WOW Center
-                </h2>
-                <p className="text-ink-70 leading-relaxed">
-                  Watch how our members experience {program.name.toLowerCase()} and see the impact firsthand.
-                </p>
-              </div>
-              <div className="overflow-hidden rounded-2xl shadow-lg border border-cream-dark">
-                <div className="relative aspect-video bg-black">
-                  <iframe
-                    src={`https://player.vimeo.com/video/${program.vimeoId}?dnt=1&transparent=0`}
-                    title={`${program.name} at WOW Center video`}
-                    className="absolute inset-0 w-full h-full"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                  />
+        <section className="relative overflow-hidden py-20 bg-moss-deep text-white" aria-labelledby="program-video-heading">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_0%,rgba(169,232,183,0.18),transparent_30%),radial-gradient(circle_at_82%_100%,rgba(255,79,163,0.16),transparent_34%)]" aria-hidden="true" />
+          <div className="container-xl relative z-10">
+            <div className="mx-auto mb-10 max-w-3xl text-center">
+              <p className="font-sans font-700 text-xs uppercase tracking-widest text-moss-light mb-3">
+                See it in action
+              </p>
+              <h2 id="program-video-heading" className="font-serif text-3xl text-white mb-4">
+                {program.name} at WOW Center
+              </h2>
+              <p className="text-white/78 text-lg leading-relaxed">
+                Watch how members experience {program.name.toLowerCase()} in a
+                real WOW day.
+              </p>
+            </div>
+
+            <div className="mx-auto max-w-5xl">
+              <div className="rounded-[28px] border border-white/15 bg-white/8 p-2 shadow-2xl shadow-black/30 backdrop-blur-sm">
+                <div className="overflow-hidden rounded-[20px] bg-black ring-1 ring-white/10">
+                  <div className="relative aspect-video">
+                    <iframe
+                      src={`https://player.vimeo.com/video/${program.vimeoId}?dnt=1&title=0&byline=0&portrait=0&badge=0&autopause=0`}
+                      title={`${program.name} at WOW Center video`}
+                      className="absolute inset-0 h-full w-full"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
                 </div>
               </div>
+              <p className="mx-auto mt-5 max-w-2xl text-center text-sm text-white/62">
+                Embedded from Vimeo. Use the player controls to watch full
+                screen or adjust playback.
+              </p>
             </div>
           </div>
         </section>
